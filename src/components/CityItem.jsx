@@ -10,14 +10,14 @@ const formatDate = (date) =>
   }).format(new Date(date));
 
 function CityItem({ city }) {
-  const { currentCity } = useCities;
-  const { cityName, emoji, date, id, position } = city;
+  const { currentCity } = useCities();
+  const { cityName, emoji, date, id, position } = city; // Access the 'id' property from the 'city' prop
 
   return (
     <li>
       <Link
         className={`${styles.cityItem} ${
-          id === currentCity.id ? styles[".cityItem--active"] : ""
+          id === currentCity.id ? styles["cityItem--active"] : "" // Use correct syntax here
         }`}
         to={`${id}?lat=${position.lat}&lng=${position.lng}`}
       >
