@@ -6,7 +6,7 @@ import {
   useCallback,
 } from "react";
 
-const BASE_URL = "http://localhost:8000";
+const BASE_URL = "http://localhost:9000";
 
 const CitiesContext = createContext();
 
@@ -40,7 +40,7 @@ function reducer(state, action) {
         currentCity: action.payload,
       };
 
-    case "city/deleted ":
+    case "city/deleted":
       return {
         ...state,
         isLoading: false,
@@ -97,7 +97,7 @@ function CitiesProvider({ children }) {
       } catch {
         dispatch({
           type: "rejected",
-          payload: "There was an error loading city...",
+          payload: "There was an error loading the city...",
         });
       }
     },

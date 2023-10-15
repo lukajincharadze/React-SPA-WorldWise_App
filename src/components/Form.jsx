@@ -1,3 +1,5 @@
+// "https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=0&longitude=0"
+
 import { useEffect, useState } from "react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
@@ -34,7 +36,7 @@ function Form() {
   const [date, setDate] = useState(new Date());
   const [notes, setNotes] = useState("");
   const [emoji, setEmoji] = useState("");
-  const [geocodingError, setGeoCodingError] = useState("");
+  const [geocodingError, setGeocodingError] = useState("");
 
   useEffect(
     function () {
@@ -43,22 +45,24 @@ function Form() {
       async function fetchCityData() {
         try {
           setIsLoadingGeocoding(true);
-          setGeoCodingError("");
+          setGeocodingError("");
+
           const res = await fetch(
             `${BASE_URL}?latitude=${lat}&longitude=${lng}`
           );
           const data = await res.json();
+          console.log(data);
 
           if (!data.countryCode)
             throw new Error(
-              "That doesn't seem to be a city. Click somewhere else😉"
+              "That doesn't seem to be a city. Click somewhere else 😉"
             );
 
           setCityName(data.city || data.locality || "");
           setCountry(data.countryName);
           setEmoji(convertToEmoji(data.countryCode));
         } catch (err) {
-          setGeoCodingError(err.message);
+          setGeocodingError(err.message);
         } finally {
           setIsLoadingGeocoding(false);
         }
@@ -79,7 +83,7 @@ function Form() {
       emoji,
       date,
       notes,
-      positon: { lat, lng },
+      position: { lat, lng },
     };
 
     await createCity(newCity);

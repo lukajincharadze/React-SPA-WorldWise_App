@@ -1,4 +1,3 @@
-// import { useNavigate, useSearchParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import {
   MapContainer,
@@ -48,6 +47,7 @@ function Map() {
           {isLoadingPosition ? "Loading..." : "Use your position"}
         </Button>
       )}
+
       <MapContainer
         center={mapPosition}
         zoom={6}
@@ -64,8 +64,7 @@ function Map() {
             key={city.id}
           >
             <Popup>
-              <span>{city.emoji}</span>
-              <span>{city.position.cityName}</span>
+              <span>{city.emoji}</span> <span>{city.cityName}</span>
             </Popup>
           </Marker>
         ))}
