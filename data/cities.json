@@ -1,52 +1,52 @@
 {
   "cities": [
     {
-      "cityName": "Lisbon",
-      "country": "Portugal",
-      "emoji": "🇵🇹",
-      "date": "2027-10-31T15:59:59.138Z",
-      "notes": "My favorite city so far!",
-      "position": {
-        "lat": 38.727881642324164,
-        "lng": -9.140900099907554
-      },
-      "id": 73930385
-    },
-    {
-      "cityName": "Madrid",
-      "country": "Spain",
-      "emoji": "🇪🇸",
+      "cityName": "Tbilisi",
+      "country": "Georgia",
+      "emoji": "🇬🇪",
       "date": "2027-07-15T08:22:53.976Z",
-      "notes": "",
+      "notes": "Fantastic 😍",
       "position": {
-        "lat": 40.46635901755316,
-        "lng": -3.7133789062500004
+        "lat": 41.693368746119084,
+        "lng": 44.80149507522584
       },
       "id": 17806751
     },
     {
-      "cityName": "Berlin",
-      "country": "Germany",
-      "emoji": "🇩🇪",
-      "date": "2027-02-12T09:24:11.863Z",
-      "notes": "Amazing 😃",
-      "position": {
-        "lat": 52.53586782505711,
-        "lng": 13.376933665713324
-      },
-      "id": 98403197
-    },
-    {
-      "cityName": "Tbilisi",
+      "cityName": "Batumi",
       "country": "Georgia",
       "emoji": "🇬🇪",
-      "date": "2023-10-05T19:03:25.317Z",
-      "notes": "",
-      "positon": {
-        "lat": "41.16211393939692",
-        "lng": "-4.768066406250001"
+      "date": "2027-02-12T09:24:11.863Z",
+      "notes": "Very hot place at summer🫠",
+      "position": {
+        "lat": 41.64805741219615,
+        "lng": 41.635265350341804
       },
-      "id": 98403198
+      "id": 98443197
+    },
+    {
+      "cityName": "Kutaisi",
+      "country": "Georgia",
+      "emoji": "🇬🇪",
+      "date": "2023-04-03T07:47:59.202Z",
+      "notes": "Lovley people🥰",
+      "position": {
+        "lat": 42.262329599606864,
+        "lng": 42.69759178161622
+      },
+      "id": 98443198
+    },
+    {
+      "cityName": "Zugdidi",
+      "country": "Georgia",
+      "emoji": "🇬🇪",
+      "date": "2024-01-25T20:41:30.002Z",
+      "notes": "Amazing 😃",
+      "position": {
+        "lat": 42.504552245506595,
+        "lng": 42.00622558593751
+      },
+      "id": 98443199
     }
   ]
 }
